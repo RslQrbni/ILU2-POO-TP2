@@ -12,17 +12,17 @@ public class BoundaryAfficherVillage {
 
 	public void afficherVillage() {
 		String nomVillage = controlAfficherVillage.donnerNomVillage();
-		String[] donneesVillage = controlAfficherVillage.donnerNomsVillageois();
+		String[] nomDeVillageoi = controlAfficherVillage.donnerNomsVillageois();
 		System.out.println("Bienvenue dans " + nomVillage
-				+ " dirigé par le chef " + donneesVillage[0] + ".");
+				+ " dirigé par le chef " + nomDeVillageoi[0] + ".");
 		System.out.println("Ce village possède un joli marché avec "
 				+ controlAfficherVillage.donnerNbEtals()
 				+ " étals mis à la disposition des villageois afin qu'ils puissent vendre leurs produits.");
-		if (donneesVillage.length > 1) {
+		if (nomDeVillageoi.length > 1) {
 			System.out.println("En plus du chef, il y a "
-					+ (donneesVillage.length - 1) + " habitants : ");
-			for (int i = 1; i < donneesVillage.length; i++) {
-				String gaulois = donneesVillage[i];
+					+ (nomDeVillageoi.length - 1) + " habitants : ");
+			for (int i = 1; i < nomDeVillageoi.length; i++) {
+				String gaulois = nomDeVillageoi[i];
 				System.out.println("- " + gaulois);
 			}
 		} else {
